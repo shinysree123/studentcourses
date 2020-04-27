@@ -12,8 +12,8 @@ router.post('/students',async(req, res )=>{
     var getparentname=req.body.parentname;
     var getparentphone=req.body.parentphone;
 try {
-    var studentdata = new studentModel(req.body);
-    var result = await studentdata.save();
+    var stud= new studentModel(req.body);
+    var result = await stud.save();
     res.json(result);
     } 
 catch (error) 
