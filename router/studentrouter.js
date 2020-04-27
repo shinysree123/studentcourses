@@ -1,5 +1,5 @@
 var Express=require('express');
-var {Studentmodel}=require('../models/studentmodel');
+var {StudentModel}=require('../models/studentmodel');
 const router= Express.Router();
 
 router.get('/',(req,res)=>{
