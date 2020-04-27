@@ -1,7 +1,6 @@
 var Express=require('express');
 var {StudentModel}=require('../models/studentmodel');
 const router= Express.Router();
-
 router.get('/',(req,res)=>{
     res.send(" student details");
 });
@@ -27,7 +26,6 @@ router.post('/viewall',async(req,res)=>{
     try {
         var result =await studentModel.find();
         res.send(result);
-        
     } catch (error) {
         console.log(error);
     res.status(500).send(error);
