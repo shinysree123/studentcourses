@@ -1,11 +1,11 @@
 var Express=require('express');
 var {courseModel}=require('../models/coursemodel');
-const router= Express.Router();
+const routers= Express.Router();
 
-router.get('/',(req,res)=>{
+routers.get('/',(req,res)=>{
     res.send(" course details");
 });
-router.post('/course',async(req, res )=>{
+routers.post('/course',async(req, res )=>{
     var getname =req.body.studentid;
     var getcoursename =req.body.coursename;
     var getcoursefee=req.body.coursefee;
@@ -22,7 +22,7 @@ catch (error)
     res.status(500).send(error);
     }   
 });
-router.post('/viewall',async(req,res)=>{
+routers.post('/viewall',async(req,res)=>{
     try {
         var result =await courseModel.find();
         res.send(result);
@@ -32,4 +32,4 @@ router.post('/viewall',async(req,res)=>{
     res.status(500).send(error);
     }
 });
-module.exports=router;
+module.exports=routers;
