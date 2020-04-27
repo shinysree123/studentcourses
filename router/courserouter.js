@@ -1,7 +1,6 @@
 var Express=require('express');
 var {courseModel}=require('../models/coursemodel');
 const routers= Express.Router();
-
 routers.get('/',(req,res)=>{
     res.send(" course details");
 });
