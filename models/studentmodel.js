@@ -1,11 +1,11 @@
 var Mongoose=require('mongoose');
 const studentSchema= new Mongoose.Schema(
-    Name:String,
-    Emailid:String,
-    Place:String,
-    Phone:Number,
-    Parentname:String,
-    Parentphone:Number,
+    {name:String,
+    emailid:String,
+    place:String,
+    phone:Number,
+    parentname:String,
+    parentphone:Number}
 );
 var studentModel=Mongoose.model('students',studentSchema);
 module.exports={studentModel}

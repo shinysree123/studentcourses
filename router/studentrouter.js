@@ -5,12 +5,12 @@ router.get('/',(req,res)=>{
     res.send(" student details");
 });
 router.post('/students',async(req, res )=>{
-    var getname =req.body.Name;
-    var getEmailid =req.body.Emailid;
-    var getPlace=req.body.Place;
-    var getPhone=req.body.Phone;
-    var getParentname=req.body.Parentname;
-    var getParentphone=req.body.Parentphone;
+    var getname =req.body.name;
+    var getemailid =req.body.emailid;
+    var getplace=req.body.place;
+    var getphone=req.body.phone;
+    var getparentname=req.body.parentname;
+    var getparentphone=req.body.parentphone;
 try {
     var studentdata = new studentModel(req.body);
     var result = await studentdata.save();
