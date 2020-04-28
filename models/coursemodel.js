@@ -3,9 +3,9 @@ const courseSchema= new Mongoose.Schema(
    {
      studentid:String,
     coursename:String,
-    coursefee:Number,
+    coursefee:String,
     instructorname:String,
-    duration:Number
+    duration:String
 }
 );
 var courseModel=Mongoose.model('courses',courseSchema);

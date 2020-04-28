@@ -4,9 +4,9 @@ const studentSchema= new Mongoose.Schema(
     name:String,
     emailid:String,
     place:String,
-    phone:Number,
+    phone:String,
     parentname:String,
-    parentphone:Number
+    parentphone:String
 
 }
 );
